@@ -1,3 +1,8 @@
+* {
+ 
+    padding: 0;
+  }
+  
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 15px;
@@ -144,13 +149,74 @@ aside#sidebar{
 }
 /*  does aside #sidebar{} vs aside#sidebar{}  matter? Why?  */
 
-/*footer */
+/*services.html */
+ul#services li{     /*for some reason page services.html > ul id=services has left pading of 40. to be more precise it coems from user agent stylesheet: padding-inline-start: 40px;
+                    Update: managed to disable it with * {
+                                                        padding: 0;
+                                                        }
+                                                        }. Should I use CSS reset before creating all the pages?? smth like https://meyerweb.com/eric/tools/css/reset/   */
+    list-style-type: none;
+    border: solid 1px #cccccc;
+    margin-bottom: 5px;
+    background-color: #e6e6e6;
+}
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width: 90%;
+    padding: 5px;
+}
 
+/*footer */
 footer{
     margin-top: 20px;
     padding: 20px;
     background-color: #e8491d;
     color: #f4f4f4;
     text-align: center;
-    
+}
+
+/* media query*/
+
+@media(max-width: 768px){
+    header #branding, header nav, header nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    #showcase h1, #showcase p{
+        margin-top: 40px;
+    }
+    #newsletter h1, #newsletter form{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #newsletter button{
+        display: block;
+        width: 100%;
+    }
+    #newsletter input[type="email"]{        /* why I cant grab instead with #newsletter input{} ??? */
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    #boxes .box{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    #main #main-col, aside#sidebar {  /* why I aside#sidebar {} instead of #sidebar {} */
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    #sidebar button{
+        display: block;
+        width: 100%;
+    }
+    .quote input, quote textarea {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }
