@@ -26,6 +26,14 @@ ul{
     border: none;
     color: #ffffff;
 }
+.dark {
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
 /*header */
 
 header{
@@ -108,15 +116,41 @@ header a:hover{
 
 #boxes{
     margin-top: 20px;
+    /*display: flex; */
+
     
 }
 #boxes .box{
     float:left;
     width: 30%;
-}/* got stuck here a bit, I dont get why in the example video tey are stacking next to each other and for me not..
-
-Edit: I figured that for #boxes {} I add display: flex; then it works. 
-
-Im comparing it with the video : 
-https://youtu.be/Wm6CUkswsNw?t=2442
+    text-align:center;
+    padding: 10px;
+}/* was stuck here a bit but appears I had 3 containers with box in each instead of 1 container with 3 boxes 
 */
+
+#boxes .box img{
+    width: 90px;
+}
+
+/* About page */
+article#main-col{
+    float: left;
+    width: 65%;  
+}
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+/*  does aside #sidebar{} vs aside#sidebar{}  matter? Why?  */
+
+/*footer */
+
+footer{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e8491d;
+    color: #f4f4f4;
+    text-align: center;
+    
+}
